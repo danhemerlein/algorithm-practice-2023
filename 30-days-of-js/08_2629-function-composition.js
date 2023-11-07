@@ -46,8 +46,8 @@ var compose = function (functions) {
 
   return function (x) {
     let value = x
+    // need to loop over the array in reverse
     for (let i = functions.length - 1; i >= 0; i--) {
-      console.log(i)
       const func = functions[i]
       value = func(value)
     }
