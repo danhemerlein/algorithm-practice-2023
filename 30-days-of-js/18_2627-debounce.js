@@ -75,14 +75,11 @@ Constraints:
  * @return {Function}
  */
 var debounce = function (fn, t) {
-  let runFn = false
+  let timer
   return function (...args) {
-    setTimeout(() => {
-      if (runFn) {
-        fn(...args)
-        runFn = false
-      }
-      runFn = true
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn(...args)
     }, t)
   }
 }
