@@ -68,6 +68,7 @@ var curry = function (fn) {
   let getArgs = 0
   // Store all the inputs
   const totalArgs = []
+
   return function curried(...args) {
     // adding number of inputs
     getArgs += args.length
