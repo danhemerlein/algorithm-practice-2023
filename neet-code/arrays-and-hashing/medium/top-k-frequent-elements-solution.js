@@ -23,7 +23,6 @@ Follow up: Your algorithm's time complexity must be better than O(n log n), wher
 */
 
 // the most number of times an integer can occur is the length of the array
-//
 
 /**
  * @param {number[]} nums
