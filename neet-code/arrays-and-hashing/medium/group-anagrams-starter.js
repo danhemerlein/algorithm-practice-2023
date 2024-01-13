@@ -31,22 +31,7 @@ strs[i] consists of lowercase English letters.
  * @param {string[]} strs
  * @return {string[][]}
  */
-var groupAnagrams = function (strs) {
-  const dict = {}
-
-  for (let item of strs) {
-    // sorted
-    const sortedItem = item.split('').sort().join('')
-
-    if (sortedItem in dict) {
-      dict[sortedItem] = [...dict[sortedItem], item]
-    } else {
-      dict[sortedItem] = [item]
-    }
-  }
-
-  return Object.keys(dict).map((key) => dict[key])
-}
+var groupAnagrams = function (strs) {}
 
 const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'] // [["bat"],["nat","tan"],["ate","eat","tea"]]
 const strs2 = [''] // [[""]]
