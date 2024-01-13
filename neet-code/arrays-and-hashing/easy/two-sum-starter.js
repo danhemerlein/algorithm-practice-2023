@@ -6,8 +6,6 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 
-
-
 Example 1:
 
 Input: nums = [2,7,11,15], target = 9
@@ -43,7 +41,12 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (nums, target) {}
+var twoSum = function (nums, target) {
+  /*
+    we're looking for the index of the current element and the index of the element
+    that's the difference betweent he current element and the target
+  */
+}
 
 const testArr1 = [2, 7, 11, 15]
 const testTraget1 = 9 // [0, 1]

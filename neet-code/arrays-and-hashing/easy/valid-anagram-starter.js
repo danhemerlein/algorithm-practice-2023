@@ -37,5 +37,13 @@ const testT1 = 'nagaram'
 const testS2 = 'rat'
 const testT2 = 'car'
 
+const testS3 = 'r'
+const testT3 = 'car'
+
+const testS4 = 'racecar'
+const testT4 = 'rraaecc'
+
 console.log(isAnagram(testS1, testT1))
 console.log(isAnagram(testS2, testT2))
+console.log(isAnagram(testS3, testT3))
+console.log(isAnagram(testS4, testT4))
