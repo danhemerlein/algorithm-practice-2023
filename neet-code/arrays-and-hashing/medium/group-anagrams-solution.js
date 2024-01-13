@@ -50,8 +50,6 @@ var groupAnagrams = function (strs) {
 
 const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'] // [["bat"],["nat","tan"],["ate","eat","tea"]]
 const strs2 = [''] // [[""]]
-const strs3 = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'] // [["a"]]
 
 console.log(groupAnagrams(strs))
 console.log(groupAnagrams(strs2))
-console.log(groupAnagrams(strs3))
