@@ -32,7 +32,7 @@ Follow up: What if the inputs contain Unicode characters? How would you adapt yo
 var isAnagram = function (s, t) {}
 
 const testS1 = 'anagram'
-const testT1 = 'nagaram'
+const testT1 = 'mnagraa'
 
 const testS2 = 'rat'
 const testT2 = 'car'
@@ -41,9 +41,9 @@ const testS3 = 'r'
 const testT3 = 'car'
 
 const testS4 = 'racecar'
-const testT4 = 'rraaecc'
+const testT4 = 'rraacce'
 
-console.log(isAnagram(testS1, testT1))
-console.log(isAnagram(testS2, testT2))
-console.log(isAnagram(testS3, testT3))
-console.log(isAnagram(testS4, testT4))
+console.log(isAnagram(testS1, testT1)) // true
+console.log(isAnagram(testS2, testT2)) // false
+console.log(isAnagram(testS3, testT3)) // false
+console.log(isAnagram(testS4, testT4)) // true
