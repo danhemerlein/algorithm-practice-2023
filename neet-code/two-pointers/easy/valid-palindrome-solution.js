@@ -35,12 +35,24 @@ s consists only of printable ASCII characters.
  */
 
 var isPalindrome = function (s) {
-  const wash = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
-  const split = wash.split('')
-  for (let i = 0; i < split.length; i++) {
-    const start = split[i]
-    const end = split[split.length - i - 1]
-    if (start !== end) {
+  // not constant memory
+  /*
+    const wash = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+    const reverse = wash.split('').reverse().join('')
+    return wash === reverse
+   */
+
+  // constant memory
+  const wash = s
+    .replace(/[^a-zA-Z0-9]/g, '')
+    .toLowerCase()
+    .split('')
+
+  for (let i = 0; i < wash.length; i++) {
+    const left = wash[i]
+    const right = wash[wash.length - i - 1]
+
+    if (left !== right) {
       return false
     }
   }
@@ -52,10 +64,12 @@ const testCaseOne = 'A man, a plan, a canal: Panama' // true
 const testCaseTwo = 'race a car' // false
 const testCaseThree = '' // true
 const testCaseFour = 'cat' // false
-const testCaseFive = 'ttttttttttt' // false
+const testCaseFive = 'ttttTTttTtTTtttt' // true
+const testCaseSix = 'xyz' // false
 
 console.log(isPalindrome(testCaseOne))
 console.log(isPalindrome(testCaseTwo))
 console.log(isPalindrome(testCaseThree))
 console.log(isPalindrome(testCaseFour))
 console.log(isPalindrome(testCaseFive))
+console.log(isPalindrome(testCaseSix))
