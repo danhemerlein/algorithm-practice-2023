@@ -33,10 +33,19 @@ var dailyTemperatures = function (temperatures) {
   for (let i = 0; i < temperatures.length; i++) {
     // get current temperature
     const currentTemp = temperatures[i]
+    /*
+      if the stack has elements
+      and the current element is greater than the most recently added element
+    */
     while (stack.length && currentTemp > stack[stack.length - 1][0]) {
+      // destructure the most rently added element
       const [stackTemp, stackIndex] = stack.pop()
+      /*
+        add to the result, at the index of the popped element a calculated number of days waited for the warmer temperature
+      */
       result[stackIndex] = i - stackIndex
     }
+    // add the element to the stack
     stack.push([currentTemp, i])
   }
   return result
@@ -47,5 +56,5 @@ const testCaseTwo = [30, 40, 50, 60] // [1,1,1,0]
 const testCaseThree = [30, 60, 90] // [1,1,0]
 
 console.log(dailyTemperatures(testCaseOne))
-console.log(dailyTemperatures(testCaseTwo))
-console.log(dailyTemperatures(testCaseThree))
+// console.log(dailyTemperatures(testCaseTwo))
+// console.log(dailyTemperatures(testCaseThree))
